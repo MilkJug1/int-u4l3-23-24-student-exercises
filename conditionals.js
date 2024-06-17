@@ -3,6 +3,7 @@ let ssButton = document.querySelector(".ss-button");
 let mathButton = document.querySelector(".math-button");
 let scienceButton = document.querySelector(".science-button");
 
+let englishMsg = document.querySelector(".english-message");
 
 
 // For each of the test questions:
@@ -22,7 +23,12 @@ englishButton.addEventListener("click", function() {
     //  - The answer should be "Mon".
     //  - If the user enters the correct answer, use .innerHTML to display the word "Correct!" in the ".english-message" div. 
     //  - If incorrect, display "Wrong! Try again."
-    
+    if (englishInput === "Mon") {
+        englishMsg.innerHTML = "Correct!";
+    } else {
+        englishMsg.innerHTML = "Wrong! Try again."
+    }
+
 
 
 
@@ -36,12 +42,18 @@ mathButton.addEventListener("click", function() {
     //  - We need to write 'Number' before the grabbed value. 
     let mathInput = Number(document.querySelector(".math").value);
 
+
     // 3. Write an if-else conditional statement.
     //  - Check if the value of the variable mathInput is correct.
     //  - The answer should be 30.
     //  - If the user enters the correct answer, use .innerHTML to display the word "Yessss!" in the ".math-message" div. 
     //  - If incorrect, display "Wrong! Try again."
-    
+    if (mathInput == 30) { 
+        document.querySelector('.math-message').innerHTML = "Yessss!"
+    } else {
+        document.querySelector('.math-message').innerHTML = "Wrong! Try again."
+    }
+
 
 });
 
@@ -55,7 +67,11 @@ ssButton.addEventListener("click", function() {
     //  - If the user enters the correct answer, use .innerHTML to display the word "You got it!" in the ".ss-message" div. 
     //  - If incorrect, display "Womp, womp. Try again."
 
-
+    if (ssInput === "Albany") {
+        document.querySelector(".ss-message").innerHTML = "You got it!"
+    } else {
+        document.querySelector(".ss-message").innerHTML = "Womp, Womp. Try Again"
+    }
 
 });
 
@@ -63,7 +79,7 @@ ssButton.addEventListener("click", function() {
 scienceButton.addEventListener("click", function() {
     // 5. Declare a variable that stores the value of the user input in the science section.
     //  - Look at previous lines of code to help you out.
-
+    let scienceVal = document.querySelector('.science').value;
 
     // 6. Write an if-else conditional statement.
     //  - Check if the value of the input variable is correct.
@@ -71,12 +87,16 @@ scienceButton.addEventListener("click", function() {
     //  - If the user enters the correct answer, use .innerHTML to display the word "Rockstar!" in the ".science-message" div. 
     //  - If incorrect, display "Sad. Try again."
 
-
+    if (scienceVal === "solid") {
+        document.querySelector('.science-message').innerHTML = "Rockstar!";
+    } else { 
+        document.querySelector('.science-message').innerHTML = "Sad. Try Again"
+    }
 
 });
 
 // Finish Early?
-//  - When a student gets the answer right, make it so their answer turns green. 
+//  - When a student gets the answer right, make it so their answer turns green.
 //  - If they get it wrong, make their answer turn red.
-//  - Write a conditional statement so the English answer is correct for both the user inputs Mon and mon. 
+//  - Write a conditional statement so the English answer is correct for both the user inputs Mon and mon.
 //  - Google compound conditionals to help you figure out how to do this!
